@@ -8,7 +8,7 @@ If you want to just play with React and forget about tooling, ES2015 features an
 
 Because there's no JSX you need to call functions to create your DOM elements, but I've wrapped `React.createElement` in a global `h` function that should help:
 
-```js
+```jsx
 h('p', 'Hello World') => <p>Hello World</p>
 h(MyComponent, { name: 'jack' }) => <MyComponent name="jack' />
 h('div', [
