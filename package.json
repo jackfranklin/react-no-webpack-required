@@ -1,0 +1,21 @@
+{
+  "name": "react-no-webpack-required",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5",
+    "live-server": "^0.9.2"
+  }
+}
