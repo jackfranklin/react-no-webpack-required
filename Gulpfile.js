@@ -5,7 +5,7 @@ var $ = require('gulp-load-plugins')();
 var environment = process.env.NODE_ENV === 'production' ? 'prod' : 'dev';
 
 gulp.task('build', function() {
-  return gulp.src(
+  var concatted = gulp.src(
     [
     'vendor/react-' + environment + '-*.js',
     'vendor/react-dom-' + environment + '*.js',
@@ -14,7 +14,12 @@ gulp.task('build', function() {
     'src/main.js'
     ]
   ).pipe($.concat(environment + '.js'))
-   .pipe(gulp.dest('./build'));
+
+  if (environment === 'prod') {
+    concatted = concatted.pipe($.uglify());
+  }
+
+  return concatted.pipe(gulp.dest('./build'));
 });
 
 gulp.task('watch', ['build'], function() {
